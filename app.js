@@ -5,7 +5,7 @@ form.addEventListener('submit', async function (e) {
     const config = { params: {q: searchTerm} }
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
-    forms.elements.query.value = '';
+    form.elements.query.value = '';
 })
 
 const makeImages = (shows) => {
